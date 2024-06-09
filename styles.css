@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Truculenta:opsz,wght@12..72,100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Truculenta", sans-serif;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  /* COLORS */
+  --rtc-color-1: #ffffff;
+  --rtc-color-2: #DDDBF1;
+  --rtc-color-3: #0d2e52;
+  --rtc-color-4: rgb(49, 42, 42);
+
+  --rtc-bgColor: var(--rtc-color-1);
+  --rtc-highlight: var(--rtc-color-2);
+  --rtc-borderColor: var(--rtc-color-3);
+  --rtc-text: var(--rtc-color-4);
+
+  /* BORDER RADIUS */
+  --rtc-border-radius: 8px;
+
+  /* SPACINGS */
+  --rtc-margin-xs: 5px;
+  --rtc-margin-s: 10px;
+  --rtc-margin-m: 20px;
+  --rtc-margin-l: 30px;
+  --rtc-margin-xl: 40px;
+
+  --rtc-padding-xs: 5px;
+  --rtc-padding-s: 10px;
+  --rtc-padding-m: 20px;
+  --rtc-padding-l: 30px;
+  --rtc-padding-xl: 60px;
+
+  --rtc-gap-xs: 5px;
+  --rtc-gap-s: 10px;
+  --rtc-gap-m: 20px;
+  --rtc-gap-l: 40px;
+  --rtc-gap-xl: 80px;
+}
+
+body {
+    background-color: var(--rtc-bgColor);
+    min-width: 100svh;
+}
+
+#stock {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: var(--rtc-gap-xl);
+    flex-wrap: wrap;
+    padding: var(--rtc-padding-xl);
+}
+
+#stock > div {
+    display: flex;
+    flex-direction: column;
+    gap: var(--rtc-gap-s);
+}
+
+#stock > div > img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.product {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.product > img:hover {
+  transform: scale(1.1);
+}
+
+.elementsInfo {
+    
+}
+
+
+#filter {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+#priceFilterInput {
+  width: 150px;
+  height: 25px;
+  border-radius: 0.50rem;
+  border: solid 1px;
+}
+
+#searchButton {
+  width: 100px;
+  height: 25px;
+  border-radius: 0.50rem;
+  border: solid 1px;
+}
+
+#filter > select {
+  width: 130px;
+  height: 30px;
+  border-radius: 0.50rem;
+}
+
+
+
+@media screen and (max-width: 735px) {
+  #stock {
+    gap: var(--rtc-gap-l);
+    padding: var(--rtc-padding-l);
+    flex-wrap: wrap;
+  }
+
+  #stock > div > img { 
+    width: 150px;
+    height: 150px;
+  }
+  
+  body {
+    overflow-x: hidden;
+  }
+}
